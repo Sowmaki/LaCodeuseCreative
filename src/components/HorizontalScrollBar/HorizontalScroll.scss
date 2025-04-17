@@ -1,0 +1,53 @@
+.carousel {
+  position: relative;
+  width: 80vw;
+  overflow: hidden; // Cache les overflow du carousel lui-même
+
+  &__wrapper {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #4caf50;
+      /* Green */
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #e0f2e9;
+      border-radius: 10px;
+    }
+
+    mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 5%,
+      black 95%,
+      transparent 100%);
+    mask-composite: intersect;
+
+    // Pour Safari
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 5%,
+      black 95%,
+      transparent 100%);
+  }
+
+
+  &__scroll {
+    display: flex;
+    gap: 1rem;
+  }
+}

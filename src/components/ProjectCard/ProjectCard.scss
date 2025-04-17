@@ -1,0 +1,41 @@
+.project-card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 220px;
+  background-color: #f0fdf4;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card__title {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #2e7d32;
+}
+
+.project-card__stack {
+  color: #4caf50;
+  font-size: 0.9rem;
+}
+
+.project-card__link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+}
