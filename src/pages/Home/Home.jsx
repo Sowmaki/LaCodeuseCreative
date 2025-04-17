@@ -3,8 +3,9 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from "react-router";
+import Hero from '../../components/Hero/Hero';
 import HorizontalScroll from '../../components/HorizontalScrollBar/HorizontalScroll';
 import { ValueCard } from '../../components/ValueCard/ValueCard';
 import values from "../../data/values";
@@ -12,7 +13,29 @@ import "./Home.scss";
 
 export const Home = () => {
 
-  const [activeProjectId, setActiveProjectId] = useState(null)
+  useEffect(() => {
+    const cursor = document.querySelector(".custom-cursor")
+    const cursorBefore = document.querySelector(".custom-cursor-before")
+
+    const handleMouseMove = (e) => {
+      const x = e.clientX + "px"
+      const y = e.clientY + "px"
+      if (cursor) {
+        cursor.style.left = x
+        cursor.style.top = y
+      }
+      if (cursorBefore) {
+        cursorBefore.style.left = x
+        cursorBefore.style.top = y
+      }
+    }
+
+    document.addEventListener("mousemove", handleMouseMove)
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, [])
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -31,8 +54,12 @@ export const Home = () => {
 
   return (
     <main className="homepage">
+
+      <div className="custom-cursor"></div>
+      <div className="custom-cursor-before"></div>
       {/* <Header /> */}
-      {/* Hero Section */}
+
+      <Hero />
       <section className="homepage__hero">
         <h1 className="homepage__hero__title">
           Développeuse Front-End & Creative Coder 🌿
@@ -61,7 +88,7 @@ export const Home = () => {
 
       {/* Projets Section */}
       <section id="projects" className="projects" data-aos="fade-left" >
-        <h2 className="projects__title" data-aos="fade-left">Projets Sélectionnés 🚀</h2>
+        <h2 className="projects__title" data-aos="fade-left">Projets </h2>
         <div className="projects__cards-wrapper">
           <HorizontalScroll />
         </div>

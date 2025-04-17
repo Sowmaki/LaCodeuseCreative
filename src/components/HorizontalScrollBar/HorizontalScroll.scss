@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
   width: 80vw;
-  overflow: hidden; // Cache les overflow du carousel lui-même
+  overflow: hidden;
 
   &__wrapper {
     display: flex;

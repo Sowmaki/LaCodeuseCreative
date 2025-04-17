@@ -1,0 +1,38 @@
+@use "../../VariablesMixins.scss" as *;
+
+.hero {
+  @include flex(column, center, center);
+
+  width: 100vw;
+  height: 100vh;
+  background: #0f172a; // bleu nuit green-friendly
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+
+  &__title {
+    color: #f0fdf4;
+    font-size: 3rem;
+    z-index: 9999999;
+    position: relative;
+    text-shadow: 0 0 10px rgba(0, 255, 127, 0.2);
+  }
+
+  // &__orb {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 150px;
+  //   height: 150px;
+  //   border-radius: 50%;
+  //   background: radial-gradient(circle, #4ade80 0%, transparent 70%);
+  //   pointer-events: none;
+  //   transform: translate(-50%, -50%);
+  //   transition: transform 0.15s ease-out;
+  //   filter: blur(20px);
+  //   opacity: 0.8;
+  //   z-index: 1;
+  // }
+}
