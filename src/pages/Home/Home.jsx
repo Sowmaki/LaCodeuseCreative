@@ -1,6 +1,4 @@
 
-import { faComments } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
@@ -55,8 +53,7 @@ export const Home = () => {
   return (
     <main className="homepage">
 
-      <div className="custom-cursor"></div>
-      <div className="custom-cursor-before"></div>
+
       {/* <Header /> */}
 
       <Hero />
@@ -74,20 +71,22 @@ export const Home = () => {
       </section>
 
       {/* Valeurs Section */}
-      <section className="values" data-aos="fade-up">
-        <h2 className="values__title" data-aos="fade-right">Ce qui m'anime ✨</h2>
-        <div className="values__cards-wrapper">
-          {values.map((value, index) =>
-            <ValueCard
-              key={`${value.title}${index}`}
-              {...value}
-            />
-          )}
+      <section className="apropos" id="apropos">
+        <div data-os="fade-up">
+          <h2 className="values__title" data-aos="fade-right">Ce qui m'anime ✨</h2>
+          <div className="values__cards-wrapper">
+            {values.map((value, index) =>
+              <ValueCard
+                key={`${value.title}${index}`}
+                {...value}
+              />
+            )}
+          </div>
         </div>
       </section>
 
       {/* Projets Section */}
-      <section id="projects" className="projects" data-aos="fade-left" >
+      <section id="portfolio" className="projects" data-aos="fade-left" >
         <h2 className="projects__title" data-aos="fade-left">Projets </h2>
         <div className="projects__cards-wrapper">
           <HorizontalScroll />
@@ -102,11 +101,6 @@ export const Home = () => {
           Écris-moi
         </Link>
       </section>
-      <Link to={{ hash: "#contact" }} className="underline text-green-700 hover:text-green-900">
-        <button className="contact-me-button">
-          <FontAwesomeIcon icon={faComments} />
-        </button>
-      </Link>
     </main>
   );
 }

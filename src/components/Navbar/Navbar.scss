@@ -1,0 +1,72 @@
+@use "../../VariablesMixins.scss" as *;
+
+.navbar {
+  @include flex(row, space-between, center);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding: 5%;
+  color: white;
+  z-index: 999;
+
+  &__nav {
+    @include flex(row, space-between, center);
+    gap: 1em;
+
+
+    &__link {
+      display: inline-block;
+      transition: text-shadow 0.3s ease, transform 0.3s ease;
+
+      &--icon {
+        display: none;
+        font-size: 1.5em;
+
+        @include respond-to(mobile) {
+          display: block;
+        }
+      }
+
+      &--text {
+        display: block;
+
+        @include respond-to(mobile) {
+          display: none;
+        }
+      }
+    }
+
+    &__link:hover {
+      text-shadow: #ffe100 1px 0 10px;
+      transform: scale(1.1) translateY(-3px);
+    }
+
+  }
+
+  &__title {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+
+    &__disponible {
+      box-sizing: border-box;
+      margin-left: 7px;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      white-space: nowrap;
+    }
+
+    &:hover &__disponible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+
+}

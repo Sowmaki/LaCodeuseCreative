@@ -1,13 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor: none;
-  font-family: 'Lucida Console';
+  font-family: "Nunito", sans-serif;
 }
 
 li {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: none;
+}
+
+h1 {
+  font-family: "Major Mono Display", monospace;
 }

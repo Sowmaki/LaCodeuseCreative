@@ -1,27 +1,19 @@
-import { useEffect, useRef } from "react"
-import { Navbar } from "../Navbar/Navbar"
-import "./Hero.scss"
+import field from "../../assets/field.png";
+import landscape from "../../assets/landscape.png";
+import { Navbar } from "../Navbar/Navbar";
+import { StarField } from "../StarField/StarField";
+import { TypeWritter } from "../TypeWritter/TypeWritter";
+import "./Hero.scss";
 
 export default function Hero() {
-  const orbRef = useRef(null)
-
-  useEffect(() => {
-    const orb = orbRef.current
-
-    const handleMouseMove = (e) => {
-      const { clientX, clientY } = e
-      orb.style.transform = `translate(${clientX}px, ${clientY}px)`
-    }
-
-    document.addEventListener("mousemove", handleMouseMove)
-    return () => document.removeEventListener("mousemove", handleMouseMove)
-  }, [])
 
   return (
     <section className="hero">
       <Navbar />
-      <div className="hero__orb" ref={orbRef}></div>
-      <h1 className="hero__title">La Codeuse Créative</h1>
+      <StarField />
+      <h1><TypeWritter text={'La Codeuse Créative'} delay={100} /></h1>
+      <img src={landscape} alt="landscape with shadow of trees by sunset" className="hero__image" />
+      <img src={field} className="hero__image__field"></img>
 
     </section>
   )
