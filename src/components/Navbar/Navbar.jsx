@@ -11,7 +11,7 @@ export const Navbar = () => {
           <span className="navbar__nav__link--icon"><FontAwesomeIcon icon={faBriefcase} /></span>
           <span className="navbar__nav__link--text">Portfolio</span>
         </a>
-        <a href='#apropos' className="navbar__nav__link">
+        <a href='#about' className="navbar__nav__link">
           <span className="navbar__nav__link--icon"><FontAwesomeIcon icon={faUserAstronaut} /></span>
           <span className="navbar__nav__link--text">À propos</span>
         </a>

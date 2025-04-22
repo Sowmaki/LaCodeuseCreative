@@ -1,0 +1,21 @@
+@use "../../VariablesMixins.scss" as *;
+
+.value-card {
+  text-align: center;
+  width: 60%;
+  padding: 2em;
+
+  @include respond-to(mobile) {
+    padding: 1em 4em;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 0.5em;
+    font-weight: 200;
+  }
+}

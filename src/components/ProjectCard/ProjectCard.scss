@@ -1,10 +1,11 @@
+@use "../../VariablesMixins.scss" as *;
+
 .project-card {
+  @include flex(column, flex-start, center);
   scroll-snap-align: start;
-  flex: 0 0 auto;
   width: 220px;
-  background-color: #f0fdf4;
-  border: 1px solid #c8e6c9;
-  border-radius: 12px;
+  background-color: #292952;
+  border-radius: 15px;
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -20,50 +21,35 @@
   &__title {
     margin-top: 0.5rem;
     font-size: 1.1rem;
-    color: #2e7d32;
   }
 
   &__stack {
-    color: #4caf50;
+    color: #B95561;
+    font-weight: 200;
     font-size: 0.9rem;
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
+    font-size: 0.875em;
     gap: 0.5em;
     margin-top: 0.5rem;
-    color: #1b5e20;
-    font-weight: bold;
     text-decoration: none;
+    transition: transform 0.3s ease;
 
     img {
       width: 1.2rem;
     }
-  }
 
-  &__summary {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #33691e;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
-
 }
 
 .project-card:hover {
   -webkit-animation: boing 0.5s ease-in-out both;
   animation: boing 0.5s ease-in-out both;
-
-  .project-card__summary {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
 }
 
 @keyframes boing {

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
   margin: 0;
@@ -8,11 +7,13 @@
 
 html {
   scroll-behavior: smooth;
+  color: white;
+  background-color: #0f172a;
 }
 
 body {
   cursor: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 li {
@@ -25,6 +26,8 @@ a {
   cursor: none;
 }
 
-h1 {
-  font-family: "Major Mono Display", monospace;
+h1,
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
 }

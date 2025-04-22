@@ -2,7 +2,94 @@
 
 .homepage {
   @include flex(column, center, center);
-  background-color: #0f172a;
+}
+
+.about {
+  height: 100vh;
+  padding: 2em;
+
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative;
+
+    // img {
+    //   width: 30px;
+    //   position: absolute;
+    //   left: 50%;
+    //   top: 50%
+    // }
+
+    .typewritter {
+      font-size: 1.5rem;
+    }
+
+    @include respond-to(mobile) {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__cards-wrapper {
+    @include flex (column, space-between, center);
+    height: 70vh;
+  }
+}
+
+.projects {
+  &__cards-wrapper {
+    @include flex(column, center, center);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+}
+
+.personal-projects {
+
+  &__subtitle {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  &__cards-wrapper {
+    @include flex(column, center, center);
+    gap: 1em;
+    padding: 2em;
+  }
+}
+
+.contact {
+  img {
+    width: 25px;
+  }
+
+  &__subtitle {
+    font-size: 0.875em;
+    font-weight: 200
+  }
+
+  &__links {
+    @include flex(row, center, flex-end);
+    margin-top: 1em;
+    gap: 1em;
+
+    a {
+      transition: transform 0.3s ease;
+    }
+
+    a:hover {
+      transform: scale(1.2)
+    }
+  }
 }
 
 .custom-cursor {

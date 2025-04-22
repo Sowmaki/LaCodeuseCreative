@@ -10,9 +10,15 @@ const values = [
     description: "Des choix techniques conscients pour un web plus responsable."
   },
   {
-    icon: "👩‍👧",
+    icon: "🧠",
+    title: "Psychologie",
+    description: "Observer, écouter, anticiper les besoins pour un web qui fait du bien."
+  }
+  ,
+  {
+    icon: "👶",
     title: "Maman Dev",
-    description: "Organisée, engagée et motivée comme jamais. #MomLife"
+    description: "Organisée, engagée et motivée comme jamais."
   }
 ];
 

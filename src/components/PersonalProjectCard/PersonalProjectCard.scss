@@ -1,0 +1,15 @@
+@use "../../VariablesMixins.scss" as *;
+
+.personal-project-card {
+  @include flex(column, center, flex-start);
+  gap: 1em;
+  background-color: #3a3a73;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  &__status {
+    color: #1a1a3c;
+    font-weight: 500;
+  }
+}

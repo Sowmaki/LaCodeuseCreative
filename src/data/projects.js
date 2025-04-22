@@ -25,7 +25,7 @@ const projects = [
   },
   {
     id: "LesPetitsPlats06",
-    title: "LesPetitsPlats",
+    title: "Les Petits Plats",
     stack: "JavaScript · Sass · HTML5",
     visual: "./src/assets/projects/miniatures/lespetitsplats.png",
     summary: "Implémentation d'un algorithme de recherche performant pour distinguer un site de recettes de ses concurrents. Maquette Figma à respecter",
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     id: "FishEye05",
-    title: "FishEye",
+    title: "Fish Eye",
     stack: "JavaScript · NVDA · HTML5 · Sass ",
     visual: "./src/assets/projects/miniatures/fisheye.png",
     summary: "Réalisation d'un site pour la mise en ligne de travaux de photographes indépendants, en respectant la maquette fournie sur Figma. Une règle importante: que le site soit accessible aux personnes malvoyantes.",
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: "GameOn04",
-    title: "GameOn",
+    title: "Game On",
     stack: "JavaScript · HTML5 · CSS ",
     visual: "./src/assets/projects/miniatures/gameon.png",
     summary: "Reprise du développement d'une landing page pour une PME spécialisée dans les conférences et les concours de jeux après le départ de leur développeur front-end. Ajout du code JavaScript manquant.",
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     id: "OhMyFood07",
-    title: "OhMyFood",
+    title: "Oh my food",
     stack: "HTML5 · CSS",
     visual: "./src/assets/projects/miniatures/ohmyfood.png",
     summary: "Développement d'une l’interface mobile-first d’un site pour une start-up dans le respect de la maquette Figma, avec integration d'animations CSS et en utilisant Git/GitHub pour le versionnage",

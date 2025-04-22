@@ -1,16 +1,24 @@
 
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import { Link } from "react-router";
+import linkedInLogo from "../../assets/linkedInLogo.png";
+import { Footer } from "../../components/Footer/Footer";
 import Hero from '../../components/Hero/Hero';
 import HorizontalScroll from '../../components/HorizontalScrollBar/HorizontalScroll';
+import { PersonalProjectCard } from "../../components/PersonalProjectCard/PersonalProjectCard";
+import { TypeWritter } from "../../components/TypeWritter/TypeWritter";
 import { ValueCard } from '../../components/ValueCard/ValueCard';
+import personalProjects from "../../data/personal-projects";
 import values from "../../data/values";
 import "./Home.scss";
 
 export const Home = () => {
 
+  // Animation du curseur
   useEffect(() => {
     const cursor = document.querySelector(".custom-cursor")
     const cursorBefore = document.querySelector(".custom-cursor-before")
@@ -35,72 +43,78 @@ export const Home = () => {
     }
   }, [])
 
+  // Animation AOS
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === "Escape") setActiveProjectId(null);
-    };
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, []);
-
-  const handleSendMailTo = () => console.log('send mail!');
-
+  const handleSendMailTo = () => {
+    window.location.href = "mailto:sos@so.com";
+  };
 
   return (
     <main className="homepage">
 
-
-      {/* <Header /> */}
-
       <Hero />
-      <section className="homepage__hero">
-        <h1 className="homepage__hero__title">
-          Développeuse Front-End & Creative Coder 🌿
-        </h1>
-        <p className="homepage__hero__description">
-          J’imagine des expériences web sensibles, immersives et éco-conçues. Code, design et créativité réunis.
-        </p>
-        <div className="homepage__hero__links">
-          <Link to={{ hash: "#projets" }} className="link">Voir mes projets</Link>
-          <Link to={{ hash: "#contact" }} className="link">Me contacter</Link>
-        </div>
-      </section>
 
-      {/* Valeurs Section */}
-      <section className="apropos" id="apropos">
+      <section className="about" id="about">
         <div data-os="fade-up">
-          <h2 className="values__title" data-aos="fade-right">Ce qui m'anime ✨</h2>
-          <div className="values__cards-wrapper">
+          <h2>
+            <TypeWritter text={"Ce qui m'anime"} delay={100} initialDelay={500} />
+            {/* <img src={lightbulb} alt="drawn lightbulb" /> */}
+          </h2>
+          <div className="about__cards-wrapper">
             {values.map((value, index) =>
               <ValueCard
                 key={`${value.title}${index}`}
                 {...value}
+                fade={index % 2 === 0 ? "fade-left" : "fade-right"}
               />
             )}
           </div>
         </div>
       </section>
 
-      {/* Projets Section */}
       <section id="portfolio" className="projects" data-aos="fade-left" >
-        <h2 className="projects__title" data-aos="fade-left">Projets </h2>
-        <div className="projects__cards-wrapper">
-          <HorizontalScroll />
+        <h2 className="projects__title" data-aos="fade-left"> Mes Projets ... </h2>
+
+        <div className="projects">
+          <h3 className="projects__subtitle">... avec mon école</h3>
+          <ul className="projects__cards-wrapper">
+            <HorizontalScroll />
+          </ul>
+        </div>
+
+        <div className="personal-projects" >
+          <h3 className="personal-projects__subtitle" >... personnels</h3>
+          <ul className="personal-projects__cards-wrapper" >
+            {personalProjects.map((project, index) =>
+              <PersonalProjectCard
+                key={`${project.title}${index}`}
+                {...project} />
+            )}
+          </ul>
+        </div>
+
+      </section>
+
+      <section id="contact" className="contact" >
+        <h2 className="contact__title" >Viens on travaille ensemble ! </h2>
+        <p className="contact__subtitle" >On peut aussi commencer par boire un café. </p>
+        <br />
+        <p className="contact__text">Dispo en remote, en freelance ou CDI — en France ou ailleurs 🌍</p>
+        <div className="contact__links">
+          <Link onClick={handleSendMailTo} className="contact__link">
+            <FontAwesomeIcon icon={faEnvelope} style={{ color: "white", fontSize: "30px" }} />
+          </Link>
+          <Link to="https://www.linkedin.com/in/solene-tassel/" className="contact__link link">
+            <img src={linkedInLogo} alt="LinkedIn logo" />
+          </Link>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="contact" data-aos="fade-up" >
-        <h2 className="contact__title" data-aos="fade-right">On travaille ensemble ? 💌</h2>
-        <p className="contact__text">Dispo en remote, en freelance ou CDI — en France ou ailleurs 🌍</p>
-        <Link onClick={handleSendMailTo} className="contact__link link">
-          Écris-moi
-        </Link>
-      </section>
+      <Footer />
+
     </main>
   );
 }

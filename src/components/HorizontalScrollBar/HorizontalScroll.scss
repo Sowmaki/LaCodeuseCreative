@@ -20,7 +20,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #4caf50;
+      background: #292952;
       /* Green */
       border-radius: 10px;
     }
@@ -47,7 +47,8 @@
 
 
   &__scroll {
+    padding: 1em 0;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
