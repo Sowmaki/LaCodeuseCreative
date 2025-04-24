@@ -5,7 +5,7 @@ import { Home } from './pages/Home/Home';
 export default function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/LaCodeuseCreative">
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/portfolio" element={<Portfolio />} />
