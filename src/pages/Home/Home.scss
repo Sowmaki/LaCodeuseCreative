@@ -26,13 +26,13 @@
     }
 
     @include respond-to(mobile) {
-      margin-bottom: 0.5em;
+      margin-bottom: 1.5em;
     }
   }
 
   &__cards-wrapper {
     @include flex (column, space-between, center);
-    height: 70vh;
+    height: 80vh;
   }
 }
 
