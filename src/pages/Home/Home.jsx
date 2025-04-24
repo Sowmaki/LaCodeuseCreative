@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import linkedInLogo from "../../assets/linkedInLogo.png";
 import { Footer } from "../../components/Footer/Footer";
 import Hero from '../../components/Hero/Hero';
