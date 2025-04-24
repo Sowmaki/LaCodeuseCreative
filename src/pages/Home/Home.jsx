@@ -103,7 +103,7 @@ export const Home = () => {
         <p className="contact__subtitle" >On peut aussi commencer par boire un café. </p>
         <p className="contact__subsubtitle" >Pour moi ce sera bien serré et sans sucre... </p>
         <br />
-        <p className="contact__text">Dispo en remote, en freelance ou CDI — en France ou ailleurs 🌍</p>
+        <p className="contact__text">Dispo en remote, en freelance ou CDI <br /> en France ou ailleurs 🌍</p>
         <div className="contact__links">
           <Link onClick={handleSendMailTo} className="contact__link">
             <FontAwesomeIcon icon={faEnvelope} style={{ color: "white", fontSize: "30px" }} />
