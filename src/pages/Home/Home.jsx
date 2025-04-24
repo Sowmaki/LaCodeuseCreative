@@ -60,7 +60,7 @@ export const Home = () => {
       <section className="about" id="about">
         <div data-os="fade-up">
           <h2>
-            <TypeWritter text={"Ce qui m'anime"} delay={100} initialDelay={500} />
+            <TypeWritter text={"Ce qui m'anime"} delay={80} initialDelay={500} />
             {/* <img src={lightbulb} alt="drawn lightbulb" /> */}
           </h2>
           <div className="about__cards-wrapper">
@@ -101,6 +101,7 @@ export const Home = () => {
       <section id="contact" className="contact" >
         <h2 className="contact__title" >Viens on travaille ensemble ! </h2>
         <p className="contact__subtitle" >On peut aussi commencer par boire un café. </p>
+        <p className="contact__subsubtitle" >Pour moi ce sera bien serré et sans sucre... </p>
         <br />
         <p className="contact__text">Dispo en remote, en freelance ou CDI — en France ou ailleurs 🌍</p>
         <div className="contact__links">

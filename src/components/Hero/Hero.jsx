@@ -8,13 +8,13 @@ import "./Hero.scss";
 export default function Hero() {
 
   return (
-    <section className="hero">
+    <header className="hero">
       <Navbar />
       <StarField />
       <h1><TypeWritter text={'La Codeuse Créative'} delay={100} /></h1>
       <img src={landscape} alt="landscape with shadow of trees by sunset" className="hero__image" />
       <img src={field} className="hero__image__field"></img>
 
-    </section>
+    </header>
   )
 }
