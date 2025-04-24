@@ -1,6 +1,7 @@
 .carousel {
   position: relative;
-  width: 80vw;
+  width: 80%;
+  max-width: 100vw;
   overflow: hidden;
 
   &__wrapper {
