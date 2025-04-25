@@ -9,6 +9,7 @@ import linkedInLogo from "../../assets/linkedInLogo.png";
 import { Footer } from "../../components/Footer/Footer";
 import Hero from '../../components/Hero/Hero';
 import HorizontalScroll from '../../components/HorizontalScrollBar/HorizontalScroll';
+import "../../components/PersonalProjectCard/PersonalProjectCard.scss";
 import { TypeWritter } from "../../components/TypeWritter/TypeWritter";
 import { ValueCard } from '../../components/ValueCard/ValueCard';
 import values from "../../data/values";
@@ -91,7 +92,7 @@ export const Home = () => {
                 key={`${project.title}${index}`}
                 {...project} />
             )} */}
-            De merveilleux projets sont à venir! Patience, patience...
+            <p className="personal-project-card">De merveilleux projets sont à venir! Patience, patience...</p>
           </ul>
         </div>
 

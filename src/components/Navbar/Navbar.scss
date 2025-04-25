@@ -15,14 +15,30 @@
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 1.2rem;
 
+  @include respond-to(mobile) {
+    align-items: flex-start
+  }
+
   &__nav {
     @include flex(row, space-between, center);
     gap: 1em;
 
+    @include respond-to(mobile) {
+      flex-direction: column;
+      position: fixed;
+      right: 5%;
+    }
+
 
     &__link {
       display: inline-block;
-      transition: text-shadow 0.3s ease, transform 0.3s ease;
+      transition: text-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.6;
+
+      &.active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
 
       &--icon {
         display: none;
@@ -45,6 +61,8 @@
     &__link:hover {
       text-shadow: #ffe100 1px 0 10px;
       transform: scale(1.1) translateY(-3px);
+      opacity: 1;
+
     }
 
   }
