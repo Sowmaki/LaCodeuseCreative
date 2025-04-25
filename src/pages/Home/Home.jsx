@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import crowdfundingDrawing from "../../assets/drawings/drawing-crowdfunding.png";
 import linkedInLogo from "../../assets/linkedInLogo.png";
 import { Footer } from "../../components/Footer/Footer";
 import Hero from '../../components/Hero/Hero';
@@ -92,7 +93,8 @@ export const Home = () => {
                 key={`${project.title}${index}`}
                 {...project} />
             )} */}
-            <p className="personal-project-card">De merveilleux projets sont à venir! Patience, patience...</p>
+            <p className="personal-project-card" data-aos="fade-up">De merveilleux projets sont à venir! Patience, patience...</p>
+            <img src={crowdfundingDrawing} alt='illustration with a talking woman "A crowdfuning is started for one of them"' className="personal-projects__illustration" data-aos="fade-up" />
           </ul>
         </div>
 

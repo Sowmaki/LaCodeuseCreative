@@ -20,7 +20,7 @@ export const Navbar = () => {
               setActiveIcon(id)
             }
           },
-          { threshold: 0.9 }
+          { threshold: 0.5 }
         )
         observer.observe(section)
         observers.push(observer)

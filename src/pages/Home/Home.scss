@@ -2,10 +2,13 @@
 
 .homepage {
   @include flex(column, center, center);
+
+  section {
+    min-height: 100vh;
+  }
 }
 
 .about {
-  height: 100vh;
   padding: 2em;
 
 
@@ -37,6 +40,7 @@
 }
 
 .projects {
+
   &__cards-wrapper {
     @include flex(column, center, center);
   }
@@ -53,7 +57,6 @@
 }
 
 .personal-projects {
-  min-height: 100vh;
 
   &__subtitle {
     text-align: center;
@@ -66,12 +69,23 @@
     gap: 1em;
     padding: 2em;
   }
+
+  img {
+    width: 40vw;
+    height: 50vh;
+    object-fit: cover;
+
+    @include respond-to(mobile) {
+      width: 80vw;
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
 }
 
 .contact {
   @include flex(column, center, center);
   gap: 1em;
-  min-height: 100vh;
 
   img {
     width: 25px;
