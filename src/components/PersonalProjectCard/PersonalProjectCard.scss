@@ -7,10 +7,11 @@
   border-radius: 15px;
   padding: 1.5rem;
   box-sizing: border-box;
-  width: 80vw;
+  width: 60vw;
 
   &__status {
     color: #1a1a3c;
     font-weight: 500;
+    width: 80vw;
   }
 }

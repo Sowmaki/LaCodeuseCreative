@@ -1,5 +1,5 @@
 
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -94,7 +94,10 @@ export const Home = () => {
                 {...project} />
             )} */}
             <p className="personal-project-card" data-aos="fade-up">De merveilleux projets sont à venir! Patience, patience...</p>
-            <img src={crowdfundingDrawing} alt='illustration with a talking woman "A crowdfuning is started for one of them"' className="personal-projects__illustration" data-aos="fade-up" />
+            <div className="personal-projects__crowdfunding">
+              <img src={crowdfundingDrawing} alt='illustration with a talking woman "A crowdfuning is started for one of them"' className="personal-projects__crowdfunding--illustration" data-aos="fade-up" />
+              <div className="personal-projects__crowdfunding--circle">Lien bientôt disponible <FontAwesomeIcon icon={faHeart} /></div>
+            </div>
           </ul>
         </div>
 
