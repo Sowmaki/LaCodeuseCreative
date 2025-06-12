@@ -5,10 +5,10 @@ export const Header = () => {
     <div className="Header">
       {/* <img src="" alt="logo du site" /> */}
       <nav>
-        <Link to="/portfolio">
-          <div>Portfolio</div>
+        <Link to="/mesprojets">
+          <div>Mes Projets</div>
         </Link>
       </nav>
     </div>
-  )
-}
+  );
+};
