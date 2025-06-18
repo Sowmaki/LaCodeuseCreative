@@ -1,4 +1,5 @@
 @use "../../VariablesMixins.scss" as *;
+@use "./Tarifs.scss" as *;
 
 .homepage {
   @include flex(column, center, center);
