@@ -1,6 +1,7 @@
 import {
   faBriefcase,
   faCommentDots,
+  faMoneyBillWave,
   faUserAstronaut,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +12,7 @@ export const Navbar = () => {
   const [activeIcon, setActiveIcon] = useState(null);
 
   useEffect(() => {
-    const sections = ["about", "mesprojets", "contact"];
+    const sections = ["about", "mesprojets", "tarifs", "contact"];
     const observers = [];
 
     sections.forEach((id) => {
@@ -58,6 +59,12 @@ export const Navbar = () => {
             <FontAwesomeIcon icon={faBriefcase} />
           </span>
           <span className="navbar__nav__link--text">Mes Projets</span>
+        </a>
+        <a href="#tarifs" className={`navbar__nav__link ${isActive("tarifs")}`}>
+          <span className="navbar__nav__link--icon">
+            <FontAwesomeIcon icon={faMoneyBillWave} />
+          </span>
+          <span className="navbar__nav__link--text">Tarifs</span>
         </a>
         <a
           href="#contact"
