@@ -12,7 +12,7 @@ export const Navbar = () => {
   const [activeIcon, setActiveIcon] = useState(null);
 
   useEffect(() => {
-    const sections = ["about", "mesprojets", "tarifs", "contact"];
+    const sections = ["hero", "about", "mesprojets", "tarifs", "contact"];
     const observers = [];
 
     sections.forEach((id) => {

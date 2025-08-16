@@ -6,11 +6,11 @@ export const Footer = () => {
       <p className="footer__text">
         © {new Date().getFullYear()} Solène Tassel — La Codeuse Créative
       </p>
-      <div className="footer__links">
+      {/* <div className="footer__links">
         <a href="#about">Ce qui m'anime</a>
         <a href="#mesprojets">Mes Projets</a>
         <a href="#tarifs">Tarifs</a>
-      </div>
+      </div> */}
     </footer>
   );
 };
