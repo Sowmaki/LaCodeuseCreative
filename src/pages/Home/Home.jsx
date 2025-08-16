@@ -67,6 +67,21 @@ export const Home = () => {
             />
             {/* <img src={lightbulb} alt="drawn lightbulb" /> */}
           </h2>
+          <p
+            style={{
+              fontSize: "0.9rem",
+              fontWeight: "100",
+              width: "80%",
+              margin: "0 auto",
+              textAlign: "center",
+              paddingBottom: "2rem",
+              fontStyle: "italic",
+            }}
+          >
+            Mon parcours est aussi diversifié que la faune de la forêt
+            amazonienne, donc je vous passe les détails. <br />
+            Voici l'essentiel à retenir :
+          </p>
           <div className="about__cards-wrapper">
             {values.map((value, index) => (
               <ValueCard

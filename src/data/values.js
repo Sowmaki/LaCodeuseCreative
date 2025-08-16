@@ -2,21 +2,22 @@ const values = [
   {
     title: "Créativité",
     description:
-      "Un regard artistique pour des interfaces uniques et inspirées.",
-  },
-  {
-    title: "Green Code",
-    description:
-      "Des choix techniques conscients pour un web plus responsable.",
+      "Mon background artistique m'a fourni tous les outils nécessaires pour vous offrir  un site web unique et inspirant.",
   },
   {
     title: "Psychologie",
     description:
-      "Observer, écouter, anticiper les besoins pour un web qui fait du bien.",
+      "J'ai une licence en psychologie et une approche empathique: Je vous observe, je vous écoute (n'ayez pas peur ;) et je vous comprends pour créer un site qui vous ressemble",
+  },
+  {
+    title: "Green Code",
+    description:
+      "Je tiens à ce que mes choix techniques soient conscients pour un web plus responsable et moins gourmand. Même si je n'ai rien contre les gourmands.",
   },
   {
     title: "Maman Dev",
-    description: "Organisée, engagée et motivée comme jamais.",
+    description:
+      "Organisée, engagée et motivée comme jamais. Vous pouvez compter sur moi pour mener vos projets à leur terme.",
   },
 ];
 
