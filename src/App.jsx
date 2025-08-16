@@ -3,7 +3,7 @@ import { Home } from "./pages/Home/Home";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/LaCodeuseCreative">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/mesprojets" element={<Portfolio />} />
