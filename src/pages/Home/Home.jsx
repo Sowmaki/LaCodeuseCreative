@@ -135,7 +135,10 @@ export const Home = () => {
 
       <section id="tarifs" className="tarifs" data-aos="fade-up">
         <h2 className="tarifs__title" data-aos="fade-left">
-          Tarifs
+          Tarifs{" "}
+          <>
+            <span style={{ color: "gray", fontSize: "1.2rem" }}>(TTC)</span>
+          </>
         </h2>
         <div className="tarifs__tables">
           {/* Table 1 : Graphisme / Identité visuelle */}
@@ -199,11 +202,11 @@ export const Home = () => {
               </tr>
               <tr>
                 <td>Refonte site existant (design + dev)</td>
-                <td>800 €</td>
+                <td>350€/j</td>
               </tr>
               <tr>
                 <td>Maintenance / mises à jour (mensuel ou ponctuel)</td>
-                <td>80 €/mois</td>
+                <td>350€/j</td>
               </tr>
             </tbody>
           </table>
@@ -241,7 +244,8 @@ export const Home = () => {
         </p>
         <br />
         <p className="contact__text">
-          Dispo en remote, en freelance ou CDI <br /> en France ou ailleurs 🌍
+          Dispo en remote 🌍
+          <br /> ou dans la Presqu'île Guérandaise
         </p>
         <div className="contact__links">
           <Link onClick={handleSendMailTo} className="contact__link">

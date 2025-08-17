@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./StarField.scss";
 
 const Star = ({ top, left, size }) => (
@@ -13,12 +14,14 @@ const Star = ({ top, left, size }) => (
 );
 
 export const StarField = ({ count = 200 }) => {
-  const stars = Array.from({ length: count }, (_, i) => ({
-    id: i,
-    top: Math.random() * 100,
-    left: Math.random() * 100,
-    size: Math.random() * 3 + 2,
-  }));
+  const [stars] = useState(
+    Array.from({ length: count }, (_, i) => ({
+      id: i,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      size: Math.random() * 3 + 2,
+    }))
+  );
 
   return (
     <div className="star-field">

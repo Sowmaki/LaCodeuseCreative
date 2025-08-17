@@ -4,6 +4,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { StarField } from "../StarField/StarField";
 import { TypeWritter } from "../TypeWritter/TypeWritter";
 import "./Hero.scss";
+import logo from "../../assets/logo.png";
 
 export default function Hero() {
   return (
@@ -13,6 +14,11 @@ export default function Hero() {
       <h1>
         <TypeWritter text={"La Codeuse Créative"} delay={100} />
       </h1>
+      <img
+        src={logo}
+        alt="logo La Codeuse Créative"
+        className="hero__logo hero__logo--animated"
+      />
       <img
         src={landscape}
         alt="landscape with shadow of trees by sunset"

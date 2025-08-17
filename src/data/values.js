@@ -12,7 +12,7 @@ const values = [
   {
     title: "Green Code",
     description:
-      "Je tiens à ce que mes choix techniques soient conscients pour un web plus responsable et moins gourmand. Même si je n'ai rien contre les gourmands.",
+      "Je tiens à ce que mes choix techniques soient conscients pour un web plus responsable et moins gourmand... Tout en restant appétissant !",
   },
   {
     title: "Maman Dev",
