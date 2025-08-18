@@ -13,12 +13,12 @@ export default function Hero() {
       <StarField />
       <h1>
         <TypeWritter text={"La Codeuse Créative"} delay={100} />
+        <img
+          src={logo}
+          alt="logo La Codeuse Créative"
+          className="hero__logo hero__logo--animated"
+        />
       </h1>
-      <img
-        src={logo}
-        alt="logo La Codeuse Créative"
-        className="hero__logo hero__logo--animated"
-      />
       <img
         src={landscape}
         alt="landscape with shadow of trees by sunset"

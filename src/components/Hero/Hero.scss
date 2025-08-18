@@ -23,10 +23,14 @@
   position: relative;
 
   .hero__logo--animated {
-    width: 40%;
+    width: 250px;
     transform: translateY(300px) scale(1);
     animation: logoUpAndGrow 3s cubic-bezier(0.6, 0.1, 0.1, 1) forwards,
       logoBreathe 2s 3s ease-in-out infinite alternate;
+
+    @include respond-to(mobile) {
+      width: 50%;
+    }
   }
 
   @keyframes logoUpAndGrow {
@@ -49,13 +53,14 @@
 
   .typewritter {
     font-family: "Handjet", sans-serif;
-    font-weight: 400;
-    width: 30vw;
+    font-weight: 300;
+    width: 80vw;
     color: #f0fdf4;
     font-size: 3rem;
     z-index: 9999999;
     position: relative;
-    text-shadow: 0 0px 20px #0f172a;
+    text-shadow: 0 0 20px #000000, 0 0 20px #000000, 0 0 20px #000000,
+      0 0 5px #ffffff, 0 0 2px #ffffff;
 
     @include respond-to(mobile) {
       font-size: 2rem;
@@ -63,6 +68,7 @@
   }
 
   h1 {
+    @include flex(column, center, center);
     margin-top: 55vh;
     text-align: center;
   }
@@ -71,6 +77,10 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+
+    @media screen and (min-width: 1000px) {
+      bottom: -20vh;
+    }
 
     &__field {
       width: 100%;
