@@ -43,6 +43,9 @@
     @include flex(column, center, center);
     margin-top: 55vh;
     text-align: center;
+    @media screen and (min-width: 1000px) {
+      margin-top: 45vh;
+    }
   }
 
   &__image {
@@ -51,10 +54,7 @@
     bottom: 0;
 
     @media screen and (min-width: 1000px) {
-      bottom: -20vh;
-    }
-    @media screen and (min-width: 1581px) {
-      bottom: -30vh;
+      bottom: -10vh;
     }
 
     &__field {
