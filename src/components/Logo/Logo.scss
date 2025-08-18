@@ -1,0 +1,73 @@
+@use "../../VariablesMixins.scss" as *;
+
+.logo {
+  position: relative;
+  width: 15rem; // Ajuste selon ton design
+  height: 15rem; // Ajuste selon ton design
+  margin: 0 auto;
+  animation: logoUpAndGrow 3s cubic-bezier(0.6, 0.1, 0.1, 1) forwards,
+    logoBreathe 2s 3s ease-in-out infinite alternate;
+
+  @include respond-to(mobile) {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@keyframes logoUpAndGrow {
+  from {
+    transform: translateY(300px) scale(1.9);
+  }
+  to {
+    transform: translateY(-40vh) scale(1.2);
+  }
+}
+
+@keyframes logoBreathe {
+  from {
+    transform: translateY(-40vh) scale(1.2);
+  }
+  to {
+    transform: translateY(-40vh) scale(1.3);
+  }
+}
+
+.logo__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  &--1 {
+    z-index: 1;
+    animation: logo-rotate-back 15s linear infinite;
+  }
+  &--2 {
+    z-index: 2;
+    animation: logo-rotate-front 12s linear infinite;
+  }
+
+  &--3 {
+    z-index: 3;
+  }
+}
+
+@keyframes logo-rotate-back {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes logo-rotate-front {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

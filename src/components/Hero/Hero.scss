@@ -9,9 +9,9 @@
   background: linear-gradient(
     0deg,
     rgba(255, 178, 148, 1) 0%,
-    rgba(255, 130, 98, 1) 16%,
-    rgba(254, 101, 91, 1) 29%,
-    rgba(152, 78, 100, 1) 40%,
+    rgba(255, 130, 98, 1) 14%,
+    rgba(254, 101, 91, 1) 25%,
+    rgba(152, 78, 100, 1) 35%,
     rgba(93, 81, 126, 1) 49%,
     rgba(43, 43, 86, 1) 58%,
     rgba(0, 0, 0, 1) 99%
@@ -21,35 +21,6 @@
   align-items: center;
   font-family: "Poppins", sans-serif;
   position: relative;
-
-  .hero__logo--animated {
-    width: 250px;
-    transform: translateY(300px) scale(1);
-    animation: logoUpAndGrow 3s cubic-bezier(0.6, 0.1, 0.1, 1) forwards,
-      logoBreathe 2s 3s ease-in-out infinite alternate;
-
-    @include respond-to(mobile) {
-      width: 50%;
-    }
-  }
-
-  @keyframes logoUpAndGrow {
-    from {
-      transform: translateY(300px) scale(1.9);
-    }
-    to {
-      transform: translateY(-40vh) scale(1.2);
-    }
-  }
-
-  @keyframes logoBreathe {
-    from {
-      transform: translateY(-40vh) scale(1.2);
-    }
-    to {
-      transform: translateY(-40vh) scale(1.3);
-    }
-  }
 
   .typewritter {
     font-family: "Handjet", sans-serif;
@@ -63,7 +34,8 @@
       0 0 5px #ffffff, 0 0 2px #ffffff;
 
     @include respond-to(mobile) {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      text-shadow: 0 0 20px #ffffff, 0 0 5px #ffffff, 0 0 2px #ffffff;
     }
   }
 
@@ -80,6 +52,9 @@
 
     @media screen and (min-width: 1000px) {
       bottom: -20vh;
+    }
+    @media screen and (min-width: 1581px) {
+      bottom: -30vh;
     }
 
     &__field {

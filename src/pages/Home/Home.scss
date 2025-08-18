@@ -3,6 +3,7 @@
 
 .homepage {
   @include flex(column, center, center);
+  gap: 5em;
 
   section {
     min-height: 100vh;
