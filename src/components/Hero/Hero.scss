@@ -46,6 +46,9 @@
     @media screen and (min-width: 1000px) {
       margin-top: 45vh;
     }
+    position: relative;
+    z-index: 9999999;
+    font-weight: 300;
   }
 
   &__image {

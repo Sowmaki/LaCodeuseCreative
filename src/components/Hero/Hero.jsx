@@ -11,8 +11,13 @@ export default function Hero() {
     <header className="hero" id="hero">
       <Navbar />
       <StarField />
-      <h1>
+      <h1
+        style={{ fontFamily: "Handjet", fontSize: "1.5rem" }}
+        className="hero__title"
+      >
         <TypeWritter text={"La Codeuse Créative"} delay={100} />
+        <br />
+        Développeuse Front <br /> Graphiste
         <Logo />
       </h1>
       <img

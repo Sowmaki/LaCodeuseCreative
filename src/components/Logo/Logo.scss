@@ -4,11 +4,12 @@
   position: relative;
   width: 15rem; // Ajuste selon ton design
   height: 15rem; // Ajuste selon ton design
-  margin: 0 auto;
+  margin: -5vh auto;
   animation: logoUpAndGrow 3s cubic-bezier(0.6, 0.1, 0.1, 1) forwards,
     logoBreathe 2s 3s ease-in-out infinite alternate;
 
   @include respond-to(mobile) {
+    margin: 0 auto;
     width: 10rem;
     height: 10rem;
   }

@@ -245,8 +245,8 @@ export const Home = () => {
         </p>
         <br />
         <p className="contact__text">
-          Dispo en remote 🌍
-          <br /> ou dans la Presqu'île Guérandaise
+          Dispo à distance 🌍 ou <br />
+          autour de Guérande | Nantes | Loire-Atlantique
         </p>
         <div className="contact__links">
           <Link onClick={handleSendMailTo} className="contact__link">
@@ -254,6 +254,7 @@ export const Home = () => {
             <FontAwesomeIcon
               icon={faEnvelope}
               style={{ color: "white", fontSize: "30px" }}
+              aria-label="Envoyer un email à Solène Tassel, développeuse web et graphiste freelance"
             />
           </Link>
           <Link
@@ -261,7 +262,11 @@ export const Home = () => {
             className="contact__link link"
           >
             <span className="sr-only">LinkedIn</span>
-            <img src={linkedInLogo} alt="LinkedIn logo" loading="lazy" />
+            <img
+              src={linkedInLogo}
+              alt="Profil LinkedIn de Solène Tassel, développeuse web et graphiste freelance"
+              loading="lazy"
+            />
           </Link>
         </div>
       </section>

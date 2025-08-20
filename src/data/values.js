@@ -1,5 +1,10 @@
 const values = [
   {
+    title: "Service",
+    description:
+      "Je crée des sites web vitrines modernes et accompagne les restaurants, artisans et indépendants de Guérande et ses alentours dans leur communication graphique et digitale.",
+  },
+  {
     title: "Créativité",
     description:
       "Mon background artistique m'a fourni tous les outils nécessaires pour vous offrir  un site web unique et inspirant.",
@@ -9,11 +14,11 @@ const values = [
     description:
       "J'ai une licence en psychologie et une approche empathique: Je vous observe, je vous écoute (n'ayez pas peur ;) et je vous comprends pour créer un site qui vous ressemble",
   },
-  {
-    title: "Green Code",
-    description:
-      "Je tiens à ce que mes choix techniques soient conscients pour un web plus responsable et moins gourmand... Tout en restant appétissant !",
-  },
+  // {
+  //   title: "Green Code",
+  //   description:
+  //     "Je tiens à ce que mes choix techniques soient conscients pour un web plus responsable et moins gourmand... Tout en restant appétissant !",
+  // },
   {
     title: "Maman Dev",
     description:
