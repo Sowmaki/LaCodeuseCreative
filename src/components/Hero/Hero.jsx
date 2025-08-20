@@ -24,7 +24,6 @@ export default function Hero() {
         src={landscape}
         alt="landscape with shadow of trees by sunset"
         className="hero__image"
-        loading="lazy"
       />
       <img src={field} className="hero__image__field"></img>
     </header>
