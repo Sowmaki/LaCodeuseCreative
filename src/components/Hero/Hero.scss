@@ -43,11 +43,12 @@
     @include flex(column, center, center);
     margin-top: 55vh;
     text-align: center;
+    position: relative;
+    z-index: 9999999;
+
     @media screen and (min-width: 1000px) {
       margin-top: 45vh;
     }
-    position: relative;
-    z-index: 9999999;
   }
 
   &__image {
