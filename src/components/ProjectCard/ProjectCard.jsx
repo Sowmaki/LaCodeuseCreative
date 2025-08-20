@@ -9,7 +9,12 @@ export default function ProjectCard({ title, visual, stack, gitHub }) {
         <img src={visual} alt={`${title} visual`} />
       </Link> */}
 
-      <img src={visual} alt={title} className="project-card__image" />
+      <img
+        src={visual}
+        alt={title}
+        className="project-card__image"
+        loading="lazy"
+      />
       <h3 className="project-card__title">{title}</h3>
       <p className="project-card__stack">{stack}</p>
 
@@ -20,7 +25,8 @@ export default function ProjectCard({ title, visual, stack, gitHub }) {
           rel="noopener noreferrer"
           className="project-card__link"
         >
-          Voir sur GitHub <img src={gitHubLogo} alt="gitHub logo" />
+          Voir sur GitHub{" "}
+          <img src={gitHubLogo} alt="gitHub logo" loading="lazy" />
         </Link>
       ) : null}
     </li>

@@ -10,16 +10,19 @@ export const Logo = () => (
       src={cercle1}
       alt="cercle arrière"
       className="logo__circle logo__circle--1"
+      loading="lazy"
     />
     <img
       src={cercle2}
       alt="cercle milieu"
       className="logo__circle logo__circle--2"
+      loading="lazy"
     />
     <img
       src={cercle3}
       alt="cercle avant"
       className="logo__circle logo__circle--3"
+      loading="lazy"
     />
   </div>
 );

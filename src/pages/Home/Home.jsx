@@ -49,7 +49,7 @@ export const Home = () => {
   }, []);
 
   const handleSendMailTo = () => {
-    window.location.href = "mailto:sos@so.com";
+    window.location.href = "mailto:solene@lacodeusecreative.fr";
   };
 
   return (
@@ -124,6 +124,7 @@ export const Home = () => {
                 alt='illustration with a talking woman "A crowdfuning is started for one of them"'
                 className="personal-projects__crowdfunding--illustration"
                 data-aos="fade-up"
+                loading="lazy"
               />
               <div className="personal-projects__crowdfunding--circle">
                 Lien bientôt disponible <FontAwesomeIcon icon={faHeart} />
@@ -260,7 +261,7 @@ export const Home = () => {
             className="contact__link link"
           >
             <span className="sr-only">LinkedIn</span>
-            <img src={linkedInLogo} alt="LinkedIn logo" />
+            <img src={linkedInLogo} alt="LinkedIn logo" loading="lazy" />
           </Link>
         </div>
       </section>
