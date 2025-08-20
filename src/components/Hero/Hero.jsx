@@ -12,7 +12,7 @@ export default function Hero() {
       <Navbar />
       <StarField />
       <h1
-        style={{ fontFamily: "Handjet", fontSize: "1.5rem" }}
+        style={{ fontFamily: "Handjet", fontSize: "1.5rem", fontWeight: 300 }}
         className="hero__title"
       >
         <TypeWritter text={"La Codeuse Créative"} delay={100} />

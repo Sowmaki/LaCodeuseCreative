@@ -20,7 +20,7 @@ export const Logo = () => (
     />
     <img
       src={cercle3}
-      alt="cercle avant"
+      alt="Logo de Solène Tassel, développeuse web et graphiste freelance"
       className="logo__circle logo__circle--3"
       loading="lazy"
     />
